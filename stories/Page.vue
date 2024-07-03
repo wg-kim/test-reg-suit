@@ -3,7 +3,7 @@
     <my-header :user="user" @login="onLogin" @logout="onLogout" @createAccount="onCreateAccount" />
 
     <section class="storybook-page">
-      <h2>Pages in Storybook</h2>
+      <h2>Pages in Storybook2</h2>
       <p>
         We recommend building UIs with a
         <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">

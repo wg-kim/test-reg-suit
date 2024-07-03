@@ -11,10 +11,10 @@
     "lint": "eslint --fix './**/*.vue'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "ci:vrt": "reg-suit run",
     "ci:storybook-generate": "build-storybook  -c .storybook -o dist-storybook -s public",
     "ci:storycap": "storycap --serverTimeout 60000 --captureTimeout 10000 --serverCmd 'npx http-server dist-storybook --ci -p 9009' http://localhost:9009",
-
+    "ci:screenshot": "storycap -C puppeteer --serverCmd \"start-storybook -p 6006\" http://localhost:6006 --serverTimeout 60000 --delay 1000",
+    "ci:reg-suit": "reg-suit run"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",

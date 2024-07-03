@@ -108,6 +108,9 @@ jobs:
           name: reg-expected
           path: .reg/
 
+      - name: storybook build
+        run: yarn build-storybook
+
       - name: screenshots
         run: yarn ci:screenshot
 

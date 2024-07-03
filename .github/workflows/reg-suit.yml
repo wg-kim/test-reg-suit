@@ -18,7 +18,7 @@ jobs:
       - name: setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.16.0
+          node-version: 18
 
       - name: checkout main branch
         uses: actions/checkout@v3
@@ -51,6 +51,10 @@ jobs:
       - name: yanr install main branch
         if: steps.check_files.outputs.files_exists == 'false'
         run: yarn install --immutable
+
+      - name: storybook build
+        if: steps.check_files.outputs.files_exists == 'false'
+        run: yarn build-storybook
 
       - name: screenshots main branch
         if: steps.check_files.outputs.files_exists == 'false'
@@ -103,6 +107,9 @@ jobs:
         with:
           name: reg-expected
           path: .reg/
+
+      - name: storybook build
+        run: yarn build-storybook
 
       - name: screenshots
         run: yarn ci:screenshot

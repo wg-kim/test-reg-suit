@@ -23,4 +23,7 @@ logs
 .env.*
 !.env.example
 
-*storybook.log.reg
+# *storybook.log.reg
+# __screenshots__
+.reg
+__screenshots__

@@ -10,7 +10,11 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint --fix './**/*.vue'",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "ci:vrt": "reg-suit run",
+    "ci:storybook-generate": "build-storybook  -c .storybook -o dist-storybook -s public",
+    "ci:storycap": "storycap --serverTimeout 60000 --captureTimeout 10000 --serverCmd 'npx http-server dist-storybook --ci -p 9009' http://localhost:9009",
+
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -33,7 +37,12 @@
     "eslint": "^8.57.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "reg-keygen-git-hash-plugin": "^0.14.3",
+    "reg-notify-github-plugin": "^0.14.4",
+    "reg-publish-s3-plugin": "^0.14.4",
+    "reg-suit": "^0.14.4",
     "storybook": "^8.0.0",
+    "storycap": "^5.0.0",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.5.8"
   },

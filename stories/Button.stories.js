@@ -8,7 +8,13 @@ export default {
   tags: ['autodocs'],
   parameters: {
     screenshot: {
-      delay: 1000
+      fullPage: false,
+      delay: 0,
+      viewports: {
+        desktop: { width: 1920, height: 1080 },
+        tablet: { width: 768, height: 1024 },
+        mobile: { width: 360, height: 800, isMobile: true, hasTouch: true },
+      },
     }
   },
   argTypes: {

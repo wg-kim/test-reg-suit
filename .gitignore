@@ -26,4 +26,4 @@ logs
 # *storybook.log.reg
 # __screenshots__
 .reg
-# __screenshots__
+__screenshots__

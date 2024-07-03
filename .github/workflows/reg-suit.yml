@@ -52,6 +52,10 @@ jobs:
         if: steps.check_files.outputs.files_exists == 'false'
         run: yarn install --immutable
 
+      - name: storybook build
+        if: steps.check_files.outputs.files_exists == 'false'
+        run: yarn build-storybook
+
       - name: screenshots main branch
         if: steps.check_files.outputs.files_exists == 'false'
         run: yarn ci:screenshot

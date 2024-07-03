@@ -11,7 +11,7 @@
     "lint": "eslint --fix './**/*.vue'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "ci:screenshot": "npx storycap http://localhost:6006 --serverCmd 'storybook -p 6006'",
+    "ci:screenshot": "npx storycap http://localhost:6006 --serverCmd 'npx storybook dev -p 6006'",
     "ci:reg-suit": "reg-suit run"
   },
   "dependencies": {

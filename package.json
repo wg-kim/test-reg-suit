@@ -12,7 +12,7 @@
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
     "ci:screenshot-local":"yarn storycap http://localhost:6006 --serverCmd 'yarn storybook dev -p 6006'",
-    "ci:screenshot": "yarn storycap http://localhost:6006 --serverCmd 'yarn build-storybook && yarn http-server ./storybook-static --ci -p 6006 --serverTimeout 300000'",
+    "ci:screenshot": "yarn storycap http://localhost:6006 --serverCmd 'yarn http-server storybook-static --ci http://localhost:6006 --serverTimeout 300000'",
      "ci:screenshot-temp": "yarn storycap --serverCmd 'yarn storybook --ci http://localhost:6006 --serverTimeout 600000'",
     "ci:reg-suit": "reg-suit run"
 

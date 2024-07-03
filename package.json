@@ -9,10 +9,11 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint --fix './**/*.vue'",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
     "ci:screenshot-local":"yarn storycap http://localhost:6006 --serverCmd 'yarn storybook dev -p 6006'",
-    "ci:screenshot": "yarn storycap http://localhost:6006 --serverCmd 'yarn build-storybook && yarn http-server storybook-static --ci -p 6006 --serverTimeout 600000'",
+    "ci:screenshot-temp": "yarn storycap http://localhost:6006 --serverCmd 'yarn build-storybook && yarn http-server storybook-static --ci -p 6006 --serverTimeout 600000'",
+     "ci:screenshot": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
     "ci:reg-suit": "reg-suit run"
 
   },

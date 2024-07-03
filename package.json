@@ -11,9 +11,7 @@
     "lint": "eslint --fix './**/*.vue'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-
-
-    "ci:screenshot": "storycap -C puppeteer --serverCmd \"yarn storybook -p 6006\" http://localhost:6006 --serverTimeout 60000 --delay 1000",
+    "ci:screenshot": "npx storycap http://localhost:6006 --serverCmd 'storybook dev -p 6006'",
     "ci:reg-suit": "reg-suit run"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "core": {
-    "workingDir": "__screenshots__",
+    "workingDir": ".reg",
     "actualDir": "__screenshots__",
     "thresholdRate": 0,
     "addIgnore": true,
